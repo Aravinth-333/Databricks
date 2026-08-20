@@ -1,0 +1,252 @@
+[
+  {
+    "product_id": "PROD100001",
+    "product_name": "Dell Inspiron 15",
+    "category": "Electronics",
+    "brand": "Dell",
+    "unit_price": 15392,
+    "supplier_name": "Dell India Pvt Ltd",
+    "launch_date": "2024-01-22",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100002",
+    "product_name": "Samsung Galaxy S25",
+    "category": "Electronics",
+    "brand": "Samsung",
+    "unit_price": 36848,
+    "supplier_name": "Samsung India Pvt Ltd",
+    "launch_date": "2024-02-03",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100003",
+    "product_name": "Apple iPhone 17",
+    "category": "Electronics",
+    "brand": "Apple",
+    "unit_price": 30056,
+    "supplier_name": "Apple India Pvt Ltd",
+    "launch_date": "2024-02-15",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100004",
+    "product_name": "Sony WH-1000XM6",
+    "category": "Accessories",
+    "brand": "Sony",
+    "unit_price": 14234,
+    "supplier_name": "Sony India Pvt Ltd",
+    "launch_date": "2024-02-27",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100005",
+    "product_name": "Boat Rockerz 550",
+    "category": "Accessories",
+    "brand": "Boat",
+    "unit_price": 56102,
+    "supplier_name": "Boat India Pvt Ltd",
+    "launch_date": "2024-03-10",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100006",
+    "product_name": "HP Pavilion 14",
+    "category": "Electronics",
+    "brand": "HP",
+    "unit_price": 4705,
+    "supplier_name": "HP India Pvt Ltd",
+    "launch_date": "2024-03-22",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100007",
+    "product_name": "Lenovo ThinkPad E16",
+    "category": "Electronics",
+    "brand": "Lenovo",
+    "unit_price": 29457,
+    "supplier_name": "Lenovo India Pvt Ltd",
+    "launch_date": "2024-04-03",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100008",
+    "product_name": "Canon EOS R50",
+    "category": "Electronics",
+    "brand": "Canon",
+    "unit_price": 67037,
+    "supplier_name": "Canon India Pvt Ltd",
+    "launch_date": "2024-04-15",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100009",
+    "product_name": "LG Smart TV 55",
+    "category": "Home Appliances",
+    "brand": "LG",
+    "unit_price": 26862,
+    "supplier_name": "LG India Pvt Ltd",
+    "launch_date": "2024-04-27",
+    "product_status": "Discontinued"
+  },
+  {
+    "product_id": "PROD100010",
+    "product_name": "Nike Air Max",
+    "category": "Fashion",
+    "brand": "Nike",
+    "unit_price": 29693,
+    "supplier_name": "Nike India Pvt Ltd",
+    "launch_date": "2024-05-09",
+    "product_status": "Discontinued"
+  },
+  {
+    "product_id": "PROD100011",
+    "product_name": "Adidas Running Shoes",
+    "category": "Fashion",
+    "brand": "Adidas",
+    "unit_price": 37263,
+    "supplier_name": "Adidas India Pvt Ltd",
+    "launch_date": "2024-05-21",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100012",
+    "product_name": "Puma Sports T-Shirt",
+    "category": "Fashion",
+    "brand": "Puma",
+    "unit_price": 21726,
+    "supplier_name": "Puma India Pvt Ltd",
+    "launch_date": "2024-06-02",
+    "product_status": "Discontinued"
+  },
+  {
+    "product_id": "PROD100013",
+    "product_name": "Philips Air Fryer",
+    "category": "Home Appliances",
+    "brand": "Philips",
+    "unit_price": 45397,
+    "supplier_name": "Philips India Pvt Ltd",
+    "launch_date": "2024-06-14",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100014",
+    "product_name": "Prestige Pressure Cooker",
+    "category": "Kitchen",
+    "brand": "Prestige",
+    "unit_price": 21179,
+    "supplier_name": "Prestige India Pvt Ltd",
+    "launch_date": "2024-06-26",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100015",
+    "product_name": "Milton Water Bottle",
+    "category": "Kitchen",
+    "brand": "Milton",
+    "unit_price": 44918,
+    "supplier_name": "Milton India Pvt Ltd",
+    "launch_date": "2024-07-08",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100016",
+    "product_name": "Cello Lunch Box",
+    "category": "Kitchen",
+    "brand": "Cello",
+    "unit_price": 12956,
+    "supplier_name": "Cello India Pvt Ltd",
+    "launch_date": "2024-07-20",
+    "product_status": "Discontinued"
+  },
+  {
+    "product_id": "PROD100017",
+    "product_name": "Logitech MX Master 3S",
+    "category": "Accessories",
+    "brand": "Logitech",
+    "unit_price": 13476,
+    "supplier_name": "Logitech India Pvt Ltd",
+    "launch_date": "2024-08-01",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100018",
+    "product_name": "SanDisk SSD 1TB",
+    "category": "Electronics",
+    "brand": "SanDisk",
+    "unit_price": 45882,
+    "supplier_name": "SanDisk India Pvt Ltd",
+    "launch_date": "2024-08-13",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100019",
+    "product_name": "Seagate External HDD",
+    "category": "Electronics",
+    "brand": "Seagate",
+    "unit_price": 6495,
+    "supplier_name": "Seagate India Pvt Ltd",
+    "launch_date": "2024-08-25",
+    "product_status": "Discontinued"
+  },
+  {
+    "product_id": "PROD100020",
+    "product_name": "JBL Flip 7",
+    "category": "Accessories",
+    "brand": "JBL",
+    "unit_price": 17161,
+    "supplier_name": "JBL India Pvt Ltd",
+    "launch_date": "2024-09-06",
+    "product_status": "Discontinued"
+  },
+  {
+    "product_id": "PROD100021",
+    "product_name": "Amazon Kindle",
+    "category": "Electronics",
+    "brand": "Amazon",
+    "unit_price": 11128,
+    "supplier_name": "Amazon India Pvt Ltd",
+    "launch_date": "2024-09-18",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100022",
+    "product_name": "Noise Smart Watch",
+    "category": "Wearables",
+    "brand": "Noise",
+    "unit_price": 48200,
+    "supplier_name": "Noise India Pvt Ltd",
+    "launch_date": "2024-09-30",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100023",
+    "product_name": "Mi Power Bank",
+    "category": "Accessories",
+    "brand": "Xiaomi",
+    "unit_price": 9916,
+    "supplier_name": "Xiaomi India Pvt Ltd",
+    "launch_date": "2024-10-12",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100024",
+    "product_name": "Wildcraft Backpack",
+    "category": "Fashion",
+    "brand": "Wildcraft",
+    "unit_price": 30671,
+    "supplier_name": "Wildcraft India Pvt Ltd",
+    "launch_date": "2024-10-24",
+    "product_status": "Available"
+  },
+  {
+    "product_id": "PROD100025",
+    "product_name": "Titan Analog Watch",
+    "category": "Fashion",
+    "brand": "Titan",
+    "unit_price": 11258,
+    "supplier_name": "Titan India Pvt Ltd",
+    "launch_date": "2024-11-05",
+    "product_status": "Available"
+  }
+]
