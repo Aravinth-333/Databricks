@@ -1,0 +1,1015 @@
+{
+  "datasets": [
+    {
+      "name": "62dd37f0",
+      "displayName": "gold_dashborad_kpis",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.ecommerce_project.gold_dashborad_kpis",
+        "dimensions": [
+          {
+            "name": "total_orders",
+            "expr": "source.total_orders",
+            "displayName": "Total Orders"
+          },
+          {
+            "expr": "source.* EXCEPT (total_orders)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "728df690",
+      "displayName": "gold_dashboard_order_status",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.ecommerce_project.gold_dashboard_order_status",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "3bbb9a1d",
+      "displayName": "gold_dashboard_category_revenue",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.ecommerce_project.gold_dashboard_category_revenue",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "e56d501a",
+      "displayName": "gold_dashboard_monthly_revenue",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.ecommerce_project.gold_dashboard_monthly_revenue",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "61356555",
+      "displayName": "gold_dashboard_regional_sales",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.ecommerce_project.gold_dashboard_regional_sales",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "46aa3013",
+      "displayName": "gold_dashboard_top_products",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.ecommerce_project.gold_dashboard_top_products",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    }
+  ],
+  "pages": [
+    {
+      "name": "9ce93353",
+      "displayName": "ecommerce_dashboard",
+      "layout": [
+        {
+          "widget": {
+            "name": "c693a632",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## <span style=\"text-align:center;display:block;\"><span style=\"color: #FFAB00;\">Thirupukudai.com Management Dashboard</span></span>"
+              ]
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "dark": "#000000"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 0,
+            "width": 9,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "total-number-of-orders",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62dd37f0",
+                  "fields": [
+                    {
+                      "name": "sum(total_orders)",
+                      "expression": "SUM(`total_orders`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block\"><span style=\"color: #FFAB00;\">TOTAL NUMBER OF ORDERS</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(total_orders)",
+                  "style": {
+                    "fontColor": {
+                      "themeColorType": "visualizationColors",
+                      "position": 3
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 1,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "fe739f87",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62dd37f0",
+                  "fields": [
+                    {
+                      "name": "sum(total_revenue)",
+                      "expression": "SUM(`total_revenue`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block\"><span style=\"color:#FFAB00\">TOTAL REVENUE</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(total_revenue)",
+                  "style": {
+                    "fontColor": {
+                      "themeColorType": "visualizationColors",
+                      "position": 3
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 5,
+            "y": 1,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "4f2b28e3",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62dd37f0",
+                  "fields": [
+                    {
+                      "name": "sum(average_order_value)",
+                      "expression": "SUM(`average_order_value`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block\"><span style=\"color:#FFAB00\">AVERAGE ORDER VALUE</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(average_order_value)",
+                  "style": {
+                    "fontColor": {
+                      "themeColorType": "visualizationColors",
+                      "position": 3
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 1,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "bdc05aa5",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62dd37f0",
+                  "fields": [
+                    {
+                      "name": "approx_percentile(delivered_rate, percentage=0_5)",
+                      "expression": "APPROX_PERCENTILE(`delivered_rate`, 0.5)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "showDescription": false,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block\"><span style=\"color:#FFAB00\">DELIVERED PERCENT</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "approx_percentile(delivered_rate, percentage=0_5)",
+                  "formatTemplate": "{{ @formatted }}%",
+                  "style": {
+                    "fontColor": {
+                      "themeColorType": "visualizationColors",
+                      "position": 3
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 3,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "a702d239",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62dd37f0",
+                  "fields": [
+                    {
+                      "name": "sum(cancellation_rate)",
+                      "expression": "SUM(`cancellation_rate`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\"><span style=\"color:#FFAB00\">CANCELLED PERCENT</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(cancellation_rate)",
+                  "formatTemplate": "{{ @formatted }}%",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  },
+                  "style": {
+                    "fontColor": {
+                      "themeColorType": "visualizationColors",
+                      "position": 3
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 5,
+            "y": 3,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "925cb81b",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62dd37f0",
+                  "fields": [
+                    {
+                      "name": "sum(return_rate)",
+                      "expression": "SUM(`return_rate`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block\"><span style=\"color:#FFAB00\">RETURNED PERCENT</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(return_rate)",
+                  "formatTemplate": "{{ @formatted }}%",
+                  "style": {
+                    "fontColor": {
+                      "themeColorType": "visualizationColors",
+                      "position": 3
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 3,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "month-wise-total-revenue",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "e56d501a",
+                  "fields": [
+                    {
+                      "name": "monthly(month_start)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `month_start`)"
+                    },
+                    {
+                      "name": "sum(total_revenue)",
+                      "expression": "SUM(`total_revenue`)"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "IN_RANGE(`total_revenue`, NULL, NULL)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block\"><span style=\"color:#FFAB00\">MONTH vs TOTAL REVENUE</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "mark": {
+                "linePatterns": [
+                  "dashed"
+                ],
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ],
+                "marker": {
+                  "shape": "triangle-down"
+                },
+                "lineShape": "linear",
+                "size": 0.2
+              },
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(month_start)",
+                  "axis": {
+                    "hideLabels": false,
+                    "hideGrid": false,
+                    "labelAngle": 0
+                  },
+                  "displayName": "Month Name",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(total_revenue)",
+                  "displayName": "Total Revenue",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": false
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 5,
+            "width": 9,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "category-vs-total-revenue",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "3bbb9a1d",
+                  "fields": [
+                    {
+                      "name": "category",
+                      "expression": "`category`"
+                    },
+                    {
+                      "name": "sum(total_revenue)",
+                      "expression": "SUM(`total_revenue`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block\"><span style=\"color:#FFAB00\">CATEGORY vs TOTAL REVENUE</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "category",
+                  "axis": {
+                    "labelAngle": 0
+                  },
+                  "displayName": "Category",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(total_revenue)",
+                  "displayName": "Total Revenue",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 11,
+            "width": 9,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "0cbd3bff",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "61356555",
+                  "fields": [
+                    {
+                      "name": "shipping_state",
+                      "expression": "`shipping_state`"
+                    },
+                    {
+                      "name": "sum(total_revenue)",
+                      "expression": "SUM(`total_revenue`)"
+                    }
+                  ],
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "DESC",
+                      "expression": "SUM(`total_revenue`)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block\"><span style=\"color:#FFAB00\">SHIPPING STATE vs TOTAL REVENUE</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "shipping_state",
+                  "axis": {
+                    "labelAngle": 0
+                  },
+                  "displayName": "Shipping State",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "measure-reversed",
+                      "measure": {
+                        "fieldName": "sum(total_revenue)"
+                      }
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(total_revenue)",
+                  "displayName": "Total Revenue",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 17,
+            "width": 9,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "569eb866",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "728df690",
+                  "fields": [
+                    {
+                      "name": "sum(total_orders)",
+                      "expression": "SUM(`total_orders`)"
+                    },
+                    {
+                      "name": "order_status",
+                      "expression": "`order_status`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\"><span style=\"color: #FFAB00;\">Order Status Distribution</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "sum(total_orders)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Total Orders"
+                },
+                "color": {
+                  "fieldName": "order_status",
+                  "displayName": "Order Status",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 23,
+            "width": 9,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "total-revenue-vs-product-name",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "46aa3013",
+                  "fields": [
+                    {
+                      "name": "total_revenue",
+                      "expression": "`total_revenue`"
+                    },
+                    {
+                      "name": "product_name",
+                      "expression": "`product_name`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\"><span style=\"color: #FFAB00;\">TOTAL REVENVE vs PRODUCT NAME</span></span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "total_revenue",
+                  "axis": {
+                    "hideLabels": false,
+                    "hideTitle": false,
+                    "labelAngle": 0
+                  },
+                  "displayName": "Total Revenue",
+                  "scale": {
+                    "type": "quantitative",
+                    "reverse": false
+                  }
+                },
+                "y": {
+                  "fieldName": "product_name",
+                  "displayName": "Product Name",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "x-reversed"
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 29,
+            "width": 9,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
